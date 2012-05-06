@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ParadroidUIActivity!</string>
+    <string name="app_name">Paradroid</string>
+    <string name="destinationLabel">Destination</string>
+    <string name="locationLabel">Alt/Lat/Long</string>
+    <string name="paradroidLabel">ParaDroid Location</string>
+    <string name="bearingToDestinationLabel">Bearing To Destination</string>
+    <string name="horizontalDistanceLabel">Horizontal Distance</string>
+    <string name="verticalDistanceLabel">Vertical Distance</string>
+    <string name="currentBearingLabel">Current Bearing</string>
+    <string name="currentSpeedLabel">Current Speed</string>
+    <string name="zero">0</string>
+    <string name="currentLocationLabel">Current Location</string>
+    <string name="dataAvailabilityLabel">Data Connection Available?</string>
+    <string name="recordsSentLabel">Sent Records / Total Records</string>
+    <string name="timeStampLabel">TimeStamp</string>
+    <string name="distanceLabel">Distance</string>
+    <string name="lastReportLabel">Last Report On</string>
+    <string name="notificationActiveNotReady">Active: Not ready</string>
+    <string name="notificationActiveReady">Active</string>
+    <string name="notificationNotActive">Not Active</string>
+    <string name="testRightServoButtonLabel">Test Right Servo</string>
+    <string name="testLeftServoButtonLabel">Test Left Servo</string>
+    <string name="statusLabel">Status</string>
+    <string name="testFlareLabel">Test Flare (Perm)</string>
+    <string name="debugLabel">DEBUG</string>
+    <string name="lightLabel">Light</string>
+    <string name="offLabel">Light Off</string>
+    <string name="testGoLabel">Test Go</string>
+    <string name="testNoGoLabel">Test No Go</string>
+    <string name="testResetLabel">Test Reset</string>
+    <string name="horziontalSpeedLabel">Horizontal Speed</string>
+    <string name="verticalSpeedLabel">Vertical Speed</string>
+
+</resources>

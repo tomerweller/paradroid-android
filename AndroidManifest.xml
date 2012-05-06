@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.paradroid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <uses-library android:name="com.android.future.usb.accessory" />
+
+        <service
+            android:enabled="true"
+            android:name=".DelegatorService" />
+        <service
+            android:enabled="true"
+            android:name=".adk.NavigationService" />
+
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:name=".view.MainActivity" >
+            <intent-filter >
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/accessory_filter" />
+        </activity>
+        <activity
+            android:label="PreferancesActivity"
+            android:launchMode="singleTask"
+            android:name=".view.PreferencesActivity" >
+        </activity>
+        <activity
+            android:label="GeoInfoActivity"
+            android:launchMode="singleTask"
+            android:name=".view.GeoInfoActivity" >
+        </activity>
+        <activity
+            android:label="WebActivity"
+            android:launchMode="singleTask"
+            android:name=".view.WebInfoActivity" >
+        </activity>
+        <activity
+            android:label="GeneralActivity"
+            android:launchMode="singleTask"
+            android:name=".view.GeneralActivity" >
+        </activity>
+        <activity
+            android:label="ADKActivity"
+            android:launchMode="singleTask"
+            android:name=".view.ADKActivity" >
+        </activity>
+        <activity
+            android:label="DummyActivity"
+            android:launchMode="singleTask"
+            android:name=".view.DummyActivity" >
+        </activity>
+        <activity
+            android:label="CameraActivity"
+            android:launchMode="singleTask"
+            android:name=".camera.CameraActivity" >
+        </activity>
+    </application>
+
+</manifest>

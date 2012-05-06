@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+                android:title="General">
+                        <EditTextPreference
+			                android:name="Diver Name"
+			                android:defaultValue="Diver Name"
+			                android:title="Diver Name"
+			                android:key="diverName" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:title="Location Criteria">
+                
+                <ListPreference
+	                android:key="locationAccuracyPreference"
+	                android:title="Location Accuracy"
+	                android:entries="@array/fineCoarseAccuracies"
+	                android:entryValues="@array/fineCoarseAccuracies"
+	                android:defaultValue="Fine"
+	                android:dialogTitle="Location Accuracy"
+	                 />
+
+         		<CheckBoxPreference
+                	android:key="altitudeRequiredPreference"
+                	android:title="Altitude Required"
+                	android:defaultValue="true"
+                	/>
+
+                 <ListPreference
+	                android:key="altitudeAccuracyPreference"
+	                android:title="Altitude Accuracy"
+	                android:entries="@array/highLowAccuracies"
+	                android:entryValues="@array/highLowAccuracies"
+	                android:defaultValue="High"
+	                android:dialogTitle="Altitude Accuracy" />
+
+         		<CheckBoxPreference
+                	android:key="bearingRequiredPreference"
+                	android:title="Bearing Required"
+                	android:defaultValue="true"
+                	/>
+ 
+                 <ListPreference
+	                android:key="bearingAccuracyPreference"
+	                android:title="Bearing Accuracy"
+	                android:entries="@array/highLowAccuracies"
+	                android:entryValues="@array/highLowAccuracies"
+	                android:defaultValue="High"
+	                android:dialogTitle="Bearing Accuracy" />
+
+         		<CheckBoxPreference
+                	android:key="speedRequiredPreference"
+                	android:title="Speed Required"
+                	android:defaultValue="true"
+                	/>
+	             
+	             <ListPreference
+	                android:key="speedAccuracyPreference"
+	                android:title="Speed Accuracy"
+	                android:entries="@array/highLowAccuracies"
+	                android:entryValues="@array/highLowAccuracies"
+	                android:defaultValue="High"	                
+	                android:dialogTitle="Speed Accuracy" />
+	                               
+        </PreferenceCategory>
+       
+        <PreferenceCategory
+                android:title="Location Refresh Intervals">
+	             <ListPreference
+	                android:key="distanceRefreshIntervalPreference"
+	                android:title="Distance Interval"
+	                android:summary="Suggested distance between refresh"
+	                android:entries="@array/distanceRefreshIntervals"
+	                android:entryValues="@array/distanceRefreshIntervalValues"
+	                android:dialogTitle="Distance Refresh Interval" />
+
+	             <ListPreference
+	                android:key="timeRefreshIntervalPreference"
+	                android:title="Time Interval"
+	                android:summary="Suggested time between refresh"
+	                android:entries="@array/timeRefreshIntervals"
+	                android:entryValues="@array/timeRefreshIntervalValues"
+	                android:dialogTitle="Time Refresh Interval" />
+        </PreferenceCategory>
+</PreferenceScreen>

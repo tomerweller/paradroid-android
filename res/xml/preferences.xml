@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+                android:title="General">
+                        <EditTextPreference
+			                android:name="Diver Name"
+			                android:defaultValue="Diver Name"
+			                android:title="Diver Name"
+			                android:key="diverName" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:title="Location Criteria">
+                
+                <ListPreference
+	                android:key="provider"
+	                android:title="Location Provider"
+	                android:entries="@array/providerDisplayValues"
+	                android:entryValues="@array/providerValues"
+	                android:defaultValue="GPS"
+	                android:dialogTitle="Location Provider"
+	                 />
+	                               
+	             <ListPreference
+	                android:key="distanceRefreshIntervalPreference"
+	                android:title="Distance Interval"
+	                android:summary="Suggested distance between refresh"
+	                android:entries="@array/distanceRefreshIntervals"
+	                android:entryValues="@array/distanceRefreshIntervalValues"
+	                android:dialogTitle="Distance Refresh Interval" />
+
+	             <ListPreference
+	                android:key="timeRefreshIntervalPreference"
+	                android:title="Time Interval"
+	                android:summary="Suggested time between refresh"
+	                android:entries="@array/timeRefreshIntervals"
+	                android:entryValues="@array/timeRefreshIntervalValues"
+	                android:dialogTitle="Time Refresh Interval" />
+        </PreferenceCategory>
+</PreferenceScreen>

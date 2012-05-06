@@ -1,0 +1,8 @@
+.idea/*
+*.iml
+proguard.cfg
+bin/*
+project.properties
+.classpath
+.project
+out/*
